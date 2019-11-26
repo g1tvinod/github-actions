@@ -17,4 +17,4 @@ jobs:
       run: | 
         pwd
         mvn -B package --file github-actions/pom.xml
-        mvn deploy -Dregistry=https://maven.pkg.github.com/g1tvinod -Dtoken=GH_TOKEN
+        mvn deploy --file github-actions/pom.xml -Dregistry=https://maven.pkg.github.com/g1tvinod -Dtoken=GH_TOKEN
