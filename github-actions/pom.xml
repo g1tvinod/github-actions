@@ -20,7 +20,7 @@
 	
 	<distributionManagement>
 		<repository>
-			<id>g1tvinod<id>
+			<id>g1tvinod</id>
 			<name>g1tvinod</name>
 			<url>https://maven.pkg.github.com/g1tvinod</url>
 		</repository>
