@@ -18,4 +18,4 @@ jobs:
         pwd
         mvn -B package --file github-actions/pom.xml
         cd github-actions/
-        mvn deploy -Dregistry=https://maven.pkg.github.com/g1tvinod -Dtoken=GH_TOKEN
+        mvn deploy -DskipTests -Dregistry=https://maven.pkg.github.com/g1tvinod -Dtoken=${{ secrets.GH_TOKEN }}
