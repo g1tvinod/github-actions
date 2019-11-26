@@ -20,9 +20,9 @@
 	
 	<distributionManagement>
 		<repository>
-			<id>g1tvinod</id>
+			<id>github</id>
 			<name>g1tvinod</name>
-			<url>https://maven.pkg.github.com/g1tvinod</url>
+			<url>https://maven.pkg.github.com/g1tvinod/github-actions</url>
 		</repository>
 	</distributionManagement>
 
