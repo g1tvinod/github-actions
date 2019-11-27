@@ -18,4 +18,5 @@ jobs:
         echo $MAVEN_HOME
         cd github-actions/
         mvn -B package --file pom.xml
-        mvn deploy -DskipTests -Dregistry=https://maven.pkg.github.com/g1tvinod -Dtoken=${{ secrets.GH_TOKEN }}
+        echo ${{ secrets.settings }} >> settings.xml
+        mvn deploy -DskipTests -s settings.xml
