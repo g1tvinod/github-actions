@@ -15,7 +15,7 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: | 
-        pwd
-        mvn -B package --file github-actions/pom.xml
+        echo $MAVEN_HOME
         cd github-actions/
-        mvn deploy -DskipTests -Dregistry=https://maven.pkg.github.com/g1tvinod/github-actions -Dtoken=${{ secrets.GH_TOKEN }}
+        mvn -B package --file pom.xml
+        mvn deploy -DskipTests -Dregistry=https://maven.pkg.github.com/g1tvinod -Dtoken=${{ secrets.GH_TOKEN }}
