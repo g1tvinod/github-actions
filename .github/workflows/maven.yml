@@ -25,5 +25,3 @@ jobs:
         cd github-actions/
         echo "<settings><servers><server><id>github</id><username>g1tvinod</username><password>${GITHUB_TOKEN}</password></server></servers></settings>" >> settings.xml
         mvn deploy -DskipTests -s settings.xml
-#        echo ${{ secrets.seetings }} >> settings.xml
-#        mvn deploy -DskipTests -s settings.xml
