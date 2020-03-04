@@ -17,3 +17,5 @@ jobs:
       run: |
         cd github-actions/ 
         mvn -B package --file pom.xml
+        apt-get update
+        apt-get install -y vim
