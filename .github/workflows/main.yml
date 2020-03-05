@@ -20,14 +20,14 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - name: Setup maven 
-      uses: docker://maven:3-jdk-8
+      uses: docker://suranagivinod/openjdk8:latest
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - name: Clone repo
       uses: actions/checkout@v2
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
-      run: mvn -version
+      run: java -version
 
     # Runs a set of commands using the runners shell
     - name: Run a multi-line script
