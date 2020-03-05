@@ -39,8 +39,8 @@ jobs:
     - name: Run a multi-line script
       env:
         ZKHOST: localhost
-        PORT: ${{ job.services.zookeeper.ports['8080'] }}
+        PORT: ${{ job.services.zookeeper.ports['2181'] }}
       run: |
         ls
         whoami
-        netstat
+        telnet ${ZKHOST} ${PORT}
