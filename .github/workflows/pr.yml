@@ -6,7 +6,13 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    
+    services:
+      zookeeper:
+        image: zookeeper
+        ports: 
+          - 2181:2181
+            
     steps:
     - uses: actions/checkout@v1
     - name: Set up JDK 1.8
@@ -24,6 +30,5 @@ jobs:
         cd github-actions/ 
         mvn -B package --file pom.xml
         python --version
-        ## sudo apt-get update
-        ## sudo apt-get install -y vim
+        pip install kazoo pyyaml
 
